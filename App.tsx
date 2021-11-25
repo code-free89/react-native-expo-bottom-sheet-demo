@@ -28,14 +28,7 @@ export default function App() {
   }, [fontsLoaded]);
 
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#fff",
-      }}
-    >
+    <View style={styles.container}>
       <Button title="OPEN BOTTOM SHEET" onPress={() => refRBSheet.current?.open()} />
       <RBSheet
         ref={refRBSheet}
@@ -132,6 +125,12 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#fff",
+  },
   drawerContainer: {
     borderTopEndRadius: 16,
     borderTopStartRadius: 16,
@@ -169,7 +168,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   confirmButton: {
-    backgroundColor: 'linear-gradient(90deg, rgba(65, 191, 188, 1) 0%, rgba(255, 0, 0, 1) 50%, rgba(61, 239, 131, 1) 100%)',
     borderRadius: 9999,
     paddingVertical: 15,
     position: 'absolute',
