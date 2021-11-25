@@ -1,0 +1,1 @@
+export const roundValues: number[] = [ 105, 106, 110 ];
